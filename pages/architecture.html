@@ -1,0 +1,58 @@
+<!--Logical overview-->
+<p class="title-section">Logical Architecture Overview</p>
+<p class="sub-title-p">Logical and physical architecture</p>
+<p> The Portfolio Manager application is structured into three distinct components,
+    following a clear separation of concerns:</p>
+
+<p><b># Blazor WebAssembly (WASM) Client</b></p>
+<p>Serves as the presentation layer and is responsible for managing the user interface and
+    client-side logic. It includes service classes that handle communication with the
+    backend via HTTP requests.</p>
+<p><b># Blazor Server Backend</b></p>
+<p> Functions as the application's server-side component. It exposes a set of API endpoints,
+    encapsulates business logic through application services, and manages data access
+    operations. All interactions with the database are performed here.</p>
+<p><b># MySQL Database</b></p>
+<p>Acts as the persistent data store for the application, containing all structured data
+    required for system operation.
+    This architectural separation supports multiple physical deployment strategies and
+    enables the client to maintain partial functionality in offline or intermittent
+    connectivity scenarios</p>
+<img src="/assets/Overview.png" alt="Logical architecture overview diagram">
+
+<p class="title-sub-section"># Client : Web Assembly</p>
+<p>The Portfolio Manager frontend is deployed as a WebAssembly (Wasm) module. In the context of ASP.NET,
+    this means the application is compiled from C# into a portable WebAssembly format, enabling it to run in
+    the browser at near-native speed. This approach leverages the benefits of .NET Blazor WebAssembly,
+    allowing rich, interactive UI experiences entirely on the client side without requiring constant server
+    communication.</p>
+<img src="/assets/ClientDiagrama.png" alt="Logical architecture overview diagram">
+
+
+<!--Data flow-->
+<p class="title-sub-section"># Client : Data Flow</p>
+<p>When the view needs a piece of data to render an element, it follows this sequence:</p>
+<ul>
+    <li>- The view binds its component state to data defined in the code-behind. <br><em>Example:
+            Home.html</em></li>
+    <li>- The code-behind retrieves this data from the ViewModel. <br><em>Example: Home.cs</em></li>
+    <li>- The ViewModel serves as the central point for business logic and data access. <br><em>Example:
+            ViewModel.cs</em></li>
+    <li>- The ViewModel communicates with services to fetch or update data. <br><em>Example:
+            _financialAssetService.UpdateFinancialAsset()</em></li>
+</ul>
+<p> Not all operations require accessing or sending data outside the Presentation layer. In such cases,
+    the
+    view does not interact with the ViewModel. Instead, the code-behind directly modifies the bound
+    data.
+
+    Example: A button that toggles the visibility of a UI component.</p>
+<p class="title-sub-section"># Client : Pages and components</p>
+
+<p>WebAssembly utilizes a hierarchy of renderable elements, which consists of Pages and Components.
+    In
+    this structure, Components function as objects, encapsulating specific functionality and UI
+    elements. In this case, when access to the ViewModel is required, delegates are used to bind
+    methods
+    from the component.</p>
+<img src="/assets/PagesComps.png" alt="Logical architecture overview diagram">

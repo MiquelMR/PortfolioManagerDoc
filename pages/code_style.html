@@ -1,0 +1,82 @@
+<!--Section title-->
+<p class="title-section"> Code Style</p>
+<p class="sub-title-p">Naming and organizational consistency rules</p>
+
+<p class="title-sub-section">
+    # Data Layer: Services and Repositories
+</p>
+<p class="fst-italic" style="margin-top: -12px;">General Rules</p>
+<ul>
+    <li>- Both services and repositories will follow the same ruleset.</li>
+    <li>- Methods should appear in the same order as listed in this document.</li>
+    <li>- The order of appearance in the interface and the implementing class should be the same.</li>
+    <li>- Methods should contain the full property name, without abbreviations.</li>
+</ul>
+
+<p class="title-sub-section">
+    # Method Naming Ruleset and Order
+</p>
+<ul>
+    <li>
+        <p style="margin-bottom: -2px;"><b>Operations on a single entity:</b></p>
+        <p>Verb<b>Entity</b>By<b>Property</b> → <span class="fst-italic">Example: GetUserByUserId</span></p>
+    </li>
+    <li>
+        <p style="margin-bottom: -2px;"><b>Operations on multiple entities:</b></p>
+        <p>Verb<b>Entities</b> → <span class="fst-italic">Example: GetFinancialAssets</span></p>
+    </li>
+    <li>
+        <p style="margin-bottom: -2px;"><b>Operations on multiple entities with filter:</b></p>
+        <p>Verb<b>Entities</b>By<b>Property</b> → <span class="fst-italic">Example: GetPortfoliosByUserEmail</span></p>
+    </li>
+    <li>
+        <p style="margin-bottom: -2px;"><b>Utility methods:</b></p>
+        <p>Verb<b>Entities</b>By<b>Property</b> → <span class="fst-italic">Example: ExistsByUserEmail</span></p>
+    </li>
+</ul>
+
+<p class="title-sub-section">Methods should appear in the following order:</p>
+<ol>
+    <li>Get single entity</li>
+    <li>Get multiple entities</li>
+    <li>Get multiple entities by property</li>
+    <li>Create entity</li>
+    <li>Update entity</li>
+    <li>Delete entity</li>
+    <li>Public utilities</li>
+    <li>Private utilities</li>
+</ol>
+
+<p class="title-sub-section">Data Organization Ruleset</p>
+<ul>
+    <li>- One service per entity</li>
+    <li>- Use interfaces for every service</li>
+    <li>- ViewModels may use several services</li>
+    <li>- One ViewModel per page</li>
+    <li>- Several components per page</li>
+    <li>- Use scoped Dependency Injections</li>
+    <li><img src="/assets/DataModelingClient.png" alt=""></li>
+    <p>Example: HomeOverview and HomeCreatePortfolio bind data and send EventCallbacks from the Home code-behind, which
+        has
+        a HomeViewModel that uses UserService and PortfolioService.</p>
+    <br>
+    <li>- Page and component naming is based on the view's purpose. Example: Home.razor for the home page.</li>
+    <li>- Code-behind and ViewModel naming is derived from page and component names. Example: HomeViewModel for the home
+        page.</li>
+</ul>
+
+<p class="title-sub-section">ViewModel and Code-Behind Ruleset</p>
+<p>Code in ViewModels, pages, and components' code-behind should appear in the following order:</p>
+<ol>
+    <li>Dependencies (e.g., services, NavigationManager, ViewModel, etc.)</li>
+    <li>Properties</li>
+    <li>Delegates</li>
+    <li>Private fields</li>
+    <li>Initialize method</li>
+    <li>Public methods</li>
+    <li>Private methods</li>
+</ol>
+<ul>
+    <li>Every property or field declaration must be in a single line, including annotations.</li>
+    <li>Example: [Parameter] public List&lt;FinancialAsset&gt; FinancialAssets { get; set; } = [];</li>
+</ul>

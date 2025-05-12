@@ -1,0 +1,51 @@
+<p class="title-section">Controller : Users</p>
+<p class="fst-italic" style="margin-top: -20px;">Route : api/users</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Http method</th>
+            <th>Url</th>
+            <th>Request payload</th>
+            <th>Return type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Get</td>
+            <td>by-email/{email}</td>
+            <td><code>userEmail : string</code></td>
+            <td><code>UserDto</code></td>
+            <td>Get the user with <code>User.Email == userEmail</code></td>
+        </tr>
+        <tr>
+            <td>Put</td>
+            <td>-</td>
+            <td><code>userUpdateDto</code></td>
+            <td><code></code></td>
+            <td>Update the user <code>userUpdateDto</code></td>
+        </tr>
+        <tr>
+            <td>Delete</td>
+            <td>-</td>
+            <td><code>userEmail : string</code></td>
+            <td>-</td>
+            <td>Delete the user with <code>User.Email == userEmail</code></td>
+        </tr>
+        <tr>
+            <td>Put</td>
+            <td>-</td>
+            <td><code>userRegisterDto</code></td>
+            <td><code>UserDto</code></td>
+            <td>Register the user <code>userRegisterDto</code></td>
+        </tr>
+        <tr>
+            <td>Post</td>
+            <td>-</td>
+            <td><code>userLoginDto</code></td>
+            <td><code>UserDto</code></td>
+            <td>Check credentials and login</td>
+        </tr>
+    </tbody>
+</table>

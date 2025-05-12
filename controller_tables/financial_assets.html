@@ -1,0 +1,44 @@
+<p class="title-section">Controller : Financial assets</p>
+<p class="fst-italic" style="margin-top: -20px;">Route : api/assets</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Http method</th>
+            <th>Url</th>
+            <th>Request payload</th>
+            <th>Return type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Get</td>
+            <td>-</td>
+            <td>-</td>
+            <td><code>List(FinancialAssetDto)</code></td>
+            <td>Get all the financial assets</td>
+        </tr>
+        <tr>
+            <td>Post</td>
+            <td>-</td>
+            <td><code>financialAssetDto</code></td>
+            <td><code>FinancialAssetDto</code></td>
+            <td>Create the financial asset <code>financialAssetDto</code></td>
+        </tr>
+        <tr>
+            <td>Patch</td>
+            <td>-</td>
+            <td><code>financialAssetDto</code></td>
+            <td><code>FinancialAssetDto</code></td>
+            <td>Update the financial asset <code>financialAssetDto</code></td>
+        </tr>
+        <tr>
+            <td>Delete/td>
+            <td>{financialAssetId}</td>
+            <td><code>financialAssetId : int</code></td>
+            <td><code>boolean</code></td>
+            <td>Delete the financial asset with <code>FinancialAsset.id == financialAssetId</code></td>
+        </tr>
+    </tbody>
+</table>

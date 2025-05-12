@@ -1,0 +1,47 @@
+<p class="title-sub-section">Version 1.0.0-alpha</p>
+<p style="margin-top: -12px;">28 April 2025</p>
+<ul>
+    <li><b># Features</b></li>
+    <li>Review portfolio composition</li>
+    <li>Review own portfolio list</li>
+    <li>Backend data validation: Model is validated now in the API and data layers</li>
+    <li>Admin page created</li>
+    <li>Implemented JWT</li>
+    <li>
+        Dynamic default avatars when avatar is null thanks to
+        <a href="https://avatar-placeholder.iran.liara.run/" target="_blank">
+            https://avatar-placeholder.iran.liara.run/
+        </a>
+    </li>
+    <li>Now icons and avatars are stored as Global Unique Identifiers</li>
+    <li>
+        Now the client does not have to worry about mismatches between IconPath and
+        IconByteArr, the backend manages it autonomously
+    </li>
+    <li>Now avatar and icons accept JPG, PNG, and SVG; this is managed in the backend</li>
+    <li>Users now have roles: User and Admin</li>
+    <li>Active as a property in UserService</li>
+</ul>
+
+<!--UI-->
+<ul>
+    <li><b># UI</b></li>
+    <li>Layouts: MainLayout + LoginLayout</li>
+    <li>Automatic navigation after user login, sign in, update and delete</li>
+</ul>
+
+<!--Bugfix-->
+<ul>
+    <li><b># Bugfix</b></li>
+    <li>Fixed CRUD operations when null icon property</li>
+    <li>Old images stored in the server now are properly deleted when entity creation/update/delete</li>
+    <li>Null control in the API layer now works</li>
+    <li>Fixed yellow notifications when null objects in the code-behind</li>
+    <li>Fixed nav scheme not working after registering a user</li>
+    <li>Fixed inconsistency with constructors: now everything uses primary constructors</li>
+    <li>Now local storage and former ActiveUser memory objects are properly deleted on logout</li>
+    <li>Fixed inconsistency with NavigationManager: now always in the code-behind (not ViewModel) and invoked
+        via delegates</li>
+    <li>Fixed redundant delegate calls in the ViewModels</li>
+    <li>User service overhauled</li>
+</ul>
