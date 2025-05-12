@@ -1,0 +1,37 @@
+<p class="title-section">Controller : Portfolios</p>
+<p class="fst-italic" style="margin-top: -20px;">Route : api/portfolios</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Http method</th>
+            <th>Url</th>
+            <th>Request payload</th>
+            <th>Return type</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Get</td>
+            <td>{portfolioId}</td>
+            <td><code>portfolioId : int</code></td>
+            <td><code>PortfolioDto</code></td>
+            <td>Get the portfolio with <code>Portfolio.PortfolioId == portfolioId</code></td>
+        </tr>
+        <tr>
+            <td>Get</td>
+            <td>{userEmail}</td>
+            <td><code>userEmail : string</code></td>
+            <td><code>List(PortfolioDto)</code></td>
+            <td>Get all the portfolios owned by a user with <code>User.Email == userEmail</code></td>
+        </tr>
+        <tr>
+            <td>Post</td>
+            <td>-</td>
+            <td><code>portfolioDto</code></td>
+            <td><code>PortfolioDto</code></td>
+            <td>Create the portfolio <code>portfolioDto</code></td>
+        </tr>
+    </tbody>
+</table>

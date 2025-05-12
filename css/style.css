@@ -1,0 +1,68 @@
+:root {
+    /*For text*/
+    --primary-color: #082038;
+
+    /*For backgrounds*/
+    --bg-primary-color: #283850;
+    --bg-secondary-color: #485870;
+    --bg-tertiary-color: #808890;
+    --bg-quaternary-color: #b0b0b8;
+}
+
+body {
+    font-size: 12px;
+}
+
+.sidebar-custom {
+    width: 200px;
+    background-color: var(--bg-primary-color);
+}
+
+.sidebar-custom * {
+    color: white;
+    font-weight: bold;
+    list-style: none;
+    padding: 0;
+}
+
+.title-index {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: -12px;
+}
+
+.title-section {
+    font-size: 20px;
+    margin-top: 16px;
+    font-weight: bold;
+}
+
+.title-sub-section {
+    margin-top: 28px;
+    font-weight: bold;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.sub-title-p{
+    margin-top: -20px;
+    font-style: italic;
+}
+
+ul {
+    list-style: none;
+}
+
+.table td, .table th {
+    white-space: nowrap;
+}
+
+.table {
+    table-layout: auto;
+    width: 100%;
+}
+
+.table ul {
+    padding-left: 20px;
+    margin: 0;
+}
