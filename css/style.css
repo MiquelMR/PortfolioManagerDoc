@@ -44,7 +44,7 @@ body {
     font-weight: bold;
 }
 
-.sub-title-p{
+.sub-title-p {
     margin-top: -20px;
     font-style: italic;
 }
@@ -53,7 +53,8 @@ ul {
     list-style: none;
 }
 
-.table td, .table th {
+.table td,
+.table th {
     white-space: nowrap;
 }
 
@@ -65,4 +66,8 @@ ul {
 .table ul {
     padding-left: 20px;
     margin: 0;
+}
+
+.snapshot{
+    width: 800px;
 }
